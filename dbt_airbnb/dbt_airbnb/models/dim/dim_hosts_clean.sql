@@ -5,7 +5,7 @@ WITH src_hosts AS (
         {{ ref('src_hosts') }}
 )
 SELECT
-    host_id,
+    host_id::TEXT AS host_id,
     NVL(
         host_name,
         'Anonymous'
