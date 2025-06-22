@@ -5,7 +5,7 @@ WITH raw_listings AS (
         {{ source('airbnb', 'listings') }}
 )
 SELECT
-    id AS listing_id,
+    cast (id as TEXT) AS listing_id,
     name AS listing_name,
     listing_url,
     room_type,

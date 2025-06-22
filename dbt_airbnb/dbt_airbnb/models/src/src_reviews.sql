@@ -5,7 +5,7 @@ WITH src_reviews AS (
     FROM {{ source('airbnb', 'reviews')}}
 )
 SELECT
-    listing_id,
+    cast (listing_id as TEXT) AS listing_id,
     date AS review_date,
     reviewer_name,
     comments AS review_text,

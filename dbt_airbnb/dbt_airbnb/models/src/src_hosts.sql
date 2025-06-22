@@ -5,7 +5,7 @@ WITH raw_hosts AS (
         {{ source('airbnb', 'hosts') }}
 )
 SELECT
-    id AS host_id,
+    cast (id as TEXT) AS host_id,
     NAME AS host_name,
     is_superhost,
     created_at,

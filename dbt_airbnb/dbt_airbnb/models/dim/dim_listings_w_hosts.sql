@@ -11,12 +11,12 @@ h AS (
 )
 
 SELECT 
-    cast (l.listing_id as text) as listing_id,
+    CAST (l.listing_id AS TEXT) as listing_id,
     l.listing_name,
     l.room_type,
     l.minimum_nights,
     l.price,
-    cast (l.host_id as text) as host_id,
+    CAST (l.host_id AS TEXT) as host_id,
     h.host_name,
     h.is_superhost as host_is_superhost,
     l.created_at,
