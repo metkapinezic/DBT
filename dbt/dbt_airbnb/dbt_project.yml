@@ -39,3 +39,6 @@ models:
       +materialized: table
     src:
       +materialized: ephemeral
+
+vars:
+  user_name: defalut_user_name_for_airbnb_project
